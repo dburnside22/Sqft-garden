@@ -14,14 +14,18 @@
 }
 
 .fourSeeds {
+    display: none;
     grid-template-columns: 1fr 1fr;
+    
 }
 
 .nineSeeds {
+    display: none;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 .sixteenSeeds {
+    display: none;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 

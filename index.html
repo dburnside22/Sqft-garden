@@ -10,27 +10,27 @@
     <h1>SQFT gardening</h1>
     <div>
         <div class="square-container">
-            <div class="oneSeed">
+            <div data-seedCount="1" class="oneSeed">
                 <div class="seed"></div>
             </div>
-            <div class="fourSeeds">
-                <div class="seed"></div>
-                <div class="seed"></div>
-                <div class="seed"></div>
-                <div class="seed"></div>
-            </div>
-            <div class="nineSeeds">
-                <div class="seed"></div>
-                <div class="seed"></div>
-                <div class="seed"></div>
-                <div class="seed"></div>
-                <div class="seed"></div>
+            <div data-seedCount="4" class="fourSeeds">
                 <div class="seed"></div>
                 <div class="seed"></div>
                 <div class="seed"></div>
                 <div class="seed"></div>
             </div>
-            <div class="sixteenSeeds">
+            <div data-seedCount="9" class="nineSeeds">
+                <div class="seed"></div>
+                <div class="seed"></div>
+                <div class="seed"></div>
+                <div class="seed"></div>
+                <div class="seed"></div>
+                <div class="seed"></div>
+                <div class="seed"></div>
+                <div class="seed"></div>
+                <div class="seed"></div>
+            </div>
+            <div data-seedCount="16" class="sixteenSeeds">
                 <div class="seed"></div>
                 <div class="seed"></div>
                 <div class="seed"></div>
@@ -49,6 +49,21 @@
                 <div class="seed"></div>
             </div>
         </div>
-    </div>    
+    </div> 
+    <ul>
+        <button onclick="toggleSeedView(4)">Cabages</button>
+        <li>Cucumbers</li>
+        <li>Carrots</li>
+        <li>Beats</li>
+        <li>Peas</li>
+    </ul>
+
+    <script>
+        function toggleSeedView(number){
+            console.log(number);
+            const seedCountContainer = document.querySelector(`div[data-seedCount="${number}"]`)
+            seedCountContainer.style.display = "grid";
+        }
+    </script>
 </body>
 </html>
