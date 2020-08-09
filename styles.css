@@ -2,33 +2,21 @@
     border: 1px solid black;
     width: 100px;
     height: 100px;
-}
-
-
-.oneSeed, .fourSeeds, .nineSeeds, .sixteenSeeds{
-    border: 3px solid red;
-    height: 94%;
     display: grid;
-    /* grid-template-columns: 1fr 1fr; */
     align-content: space-around;
 }
 
 .fourSeeds {
-    display: none;
     grid-template-columns: 1fr 1fr;
-    
 }
 
 .nineSeeds {
-    display: none;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 .sixteenSeeds {
-    display: none;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-
 
 .seed {
     width: 10px;
