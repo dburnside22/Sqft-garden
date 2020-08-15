@@ -1,9 +1,23 @@
+:root {
+    --text-color: #213A82;
+    --seed-color: #698D68;
+    --border-color: #A36D00;
+    --button-color: #C1CC99;
+}
+
+
+body {
+    color: var(--text-color);
+    text-align: center;
+}
+
 .square-container {
-    border: 1px solid black;
+    border: 10px solid var(--border-color);
     width: 100px;
     height: 100px;
     display: grid;
     align-content: space-around;
+    border-radius: 10%;
 }
 
 .fourSeeds {
@@ -19,8 +33,9 @@
 }
 
 .seed {
-    width: 10px;
-    height: 10px;
-    border: 1px solid black;
-    margin: auto; 
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: var(--seed-color);
 }
