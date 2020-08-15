@@ -39,3 +39,14 @@ body {
     border-radius: 50%;
     background-color: var(--seed-color);
 }
+
+.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.plant-button {
+    background-color: var(--button-color);
+    font-size: 16px;
+    border-radius: 10%;
+}
