@@ -24,7 +24,6 @@ function removeSeed(){
 function addAndRemoveClassNames(seedNumberToDisplay){
     seedContainerClassNames.forEach(name => {
         if(seedContainer.classList.contains(name)){
-            console.log(name);
             seedContainer.classList.remove(name);
         }
     });
