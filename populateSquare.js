@@ -34,7 +34,7 @@ function addAndRemoveClassNames(seedNumberToDisplay){
 
 
 function updateSeedDisplay(seedNumberToDisplay){
-    if(seedNumberToDisplay >= 0){
+    if(seedNumberToDisplay >= 0 && seedNumberToDisplay !== 100){
         if (seedNumberToDisplay != seedCount) {
             addAndRemoveClassNames(seedNumberToDisplay)
         }    
