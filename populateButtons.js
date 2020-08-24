@@ -1,4 +1,4 @@
-const plantsAndSpaceing = []
+let plantsAndSpaceing = []
 const buttonContainer = document.querySelector(".buttons-container");
 
 function createButtonElement(plant) {
@@ -11,19 +11,32 @@ function createButtonElement(plant) {
     return button;
 }
 
-
 function addButton(plant){
     button = createButtonElement(plant);
     buttonContainer.appendChild(button);
 }
 
-async function populateButtons() {
+async function getInitialButtons() {
     await fetch("./squareFootGardenData.json")
             .then(response => response.json())
             .then(data => plantsAndSpaceing.push(...data["plantsAndSpaceing"]))
-    plantsAndSpaceing.forEach(plant => {
-        addButton(plant)
-    });
-}    
+    populateButtons(plantsAndSpaceing);
+    sortButtonsBySeedCount(1);
+}  
 
-populateButtons();
+function populateButtons(buttons){
+    buttonContainer.innerHTML = "";
+    buttons.forEach(button => {
+        addButton(button);
+    });
+}
+
+function sortButtonsBySeedCount(seedCount){
+    const newPlantList = plantsAndSpaceing.filter((record) => {
+        console.log(record.spacing)
+        record.spacing === seedCount
+    })
+    
+}
+
+getInitialButtons();
