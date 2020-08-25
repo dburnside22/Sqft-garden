@@ -18,6 +18,7 @@ body {
     display: grid;
     align-content: space-around;
     border-radius: 10%;
+    margin-bottom: 4%;
 }
 
 .fourSeeds {
@@ -48,5 +49,5 @@ body {
 .plant-button {
     background-color: var(--button-color);
     font-size: 16px;
-    border-radius: 10%;
+    border-radius: 10px;
 }
