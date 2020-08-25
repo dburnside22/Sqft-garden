@@ -1,65 +1,254 @@
 {
     "plantsAndSpaceing": [
-        {"plantName": "asparagus", "spacing": 1},
-        {"plantName": "basil (large)", "spacing": 1},
-        {"plantName": "basil (small)", "spacing": 4},
-        {"plantName": "beets (large)", "spacing": 9},
-        {"plantName": "beets (small)", "spacing": 16},
-        {"plantName": "bok choy", "spacing": 4},
-        {"plantName": "broccoli", "spacing": 1},
-        {"plantName": "cabbage", "spacing": 1},
-        {"plantName": "carrots", "spacing": 16},
-        {"plantName": "celery", "spacing": 1},
-        {"plantName": "chives", "spacing": 1},
-        {"plantName": "cilantro", "spacing": 4},
-        {"plantName": "corn", "spacing": 1},
-        {"plantName": "cucumbers", "spacing": 1},
-        {"plantName": "dill", "spacing": 1},
-        {"plantName": "drying beans", "spacing": 4},
-        {"plantName": "eggplant", "spacing": 1},
-        {"plantName": "fava beans", "spacing": 4},
-        {"plantName": "fennel", "spacing": 1},
-        {"plantName": "garlic", "spacing": 9},
-        {"plantName": "green beans (bush)", "spacing": 9},
-        {"plantName": "green onions", "spacing": 16},
-        {"plantName": "gourds", "spacing": 1},
-        {"plantName": "head lettuce", "spacing": 1},
-        {"plantName": "kale", "spacing": 1},
-        {"plantName": "kohlrabi", "spacing": 4},
-        {"plantName": "leaf lettuce", "spacing": 4},
-        {"plantName": "leeks", "spacing": 9},
-        {"plantName": "lima beans", "spacing": 9},
-        {"plantName": "marigolds", "spacing": 4},
-        {"plantName": "mustard greens", "spacing": 1},
-        {"plantName": "nasturtiums", "spacing": 1},
-        {"plantName": "okra", "spacing": 1},
-        {"plantName": "onions (medium)", "spacing": 9},
-        {"plantName": "onions (storage)", "spacing": 4},
-        {"plantName": "oregano", "spacing": 1},
-        {"plantName": "parsnips", "spacing": 16},
-        {"plantName": "parsely", "spacing": 1},
-        {"plantName": "peas, garden", "spacing": 9},
-        {"plantName": "peas, sugar", "spacing": 9},
-        {"plantName": "peppers", "spacing": 1},
-        {"plantName": "potatoes", "spacing": 1},
-        {"plantName": "radish", "spacing": 16},
-        {"plantName": "rosemary", "spacing": 1},
-        {"plantName": "rutabagas", "spacing": 4},
-        {"plantName": "sage", "spacing": 1},
-        {"plantName": "savory", "spacing": 1},
-        {"plantName": "soybeans", "spacing": 4},
-        {"plantName": "spinach", "spacing": 9},
-        {"plantName": "strawberries", "spacing": 1},
-        {"plantName": "sunflowers", "spacing": 1},
-        {"plantName": "sweet potatoes", "spacing": 1},
-        {"plantName": "swiss chard", "spacing": 4},
-        {"plantName": "thyme", "spacing": 1},
-        {"plantName": "tomatoes", "spacing": 1},
-        {"plantName": "turnips", "spacing": 9},
-        {"plantName": "cantaloupe", "spacing": 100},
-        {"plantName": "pumpkins", "spacing": 100},
-        {"plantName": "watermelon", "spacing": 100},
-        {"plantName": "winter squash", "spacing": 100},
-        {"plantName": "zucchini", "spacing": 100}
+        {
+            "plantName": "asparagus",
+            "spacing": 1
+        },
+        {
+            "plantName": "basil (large)",
+            "spacing": 1
+        },
+        {
+            "plantName": "basil (small)",
+            "spacing": 4
+        },
+        {
+            "plantName": "beets (large)",
+            "spacing": 9
+        },
+        {
+            "plantName": "beets (small)",
+            "spacing": 16
+        },
+        {
+            "plantName": "bok choy",
+            "spacing": 4
+        },
+        {
+            "plantName": "broccoli",
+            "spacing": 1
+        },
+        {
+            "plantName": "cauliflower",
+            "spacing": 1,
+            "transplantMonths": ["january"]
+        },
+        {
+            "plantName": "cabbage",
+            "spacing": 1,
+            "transplantMonths": ["january"]
+        },
+        {
+            "plantName": "carrots",
+            "spacing": 16
+        },
+        {
+            "plantName": "celery",
+            "spacing": 1
+        },
+        {
+            "plantName": "chives",
+            "spacing": 1
+        },
+        {
+            "plantName": "cilantro",
+            "spacing": 4
+        },
+        {
+            "plantName": "corn",
+            "spacing": 1
+        },
+        {
+            "plantName": "cucumbers",
+            "spacing": 1
+        },
+        {
+            "plantName": "dill",
+            "spacing": 1
+        },
+        {
+            "plantName": "drying beans",
+            "spacing": 4
+        },
+        {
+            "plantName": "eggplant",
+            "spacing": 1
+        },
+        {
+            "plantName": "fava beans",
+            "spacing": 4,
+            "seedMonths": ["january"]
+        },
+        {
+            "plantName": "fennel",
+            "spacing": 1
+        },
+        {
+            "plantName": "garlic",
+            "spacing": 9
+        },
+        {
+            "plantName": "green beans (bush)",
+            "spacing": 9
+        },
+        {
+            "plantName": "green onions",
+            "spacing": 16
+        },
+        {
+            "plantName": "gourds",
+            "spacing": 1
+        },
+        {
+            "plantName": "head lettuce",
+            "spacing": 1
+        },
+        {
+            "plantName": "kale",
+            "spacing": 1
+        },
+        {
+            "plantName": "kohlrabi",
+            "spacing": 4,
+            "seedMonths": ["january"], 
+            "transplantMonths": ["january"] 
+        },
+        {
+            "plantName": "leaf lettuce",
+            "spacing": 4
+        },
+        {
+            "plantName": "leeks",
+            "spacing": 9
+        },
+        {
+            "plantName": "lima beans",
+            "spacing": 9
+        },
+        {
+            "plantName": "marigolds",
+            "spacing": 4
+        },
+        {
+            "plantName": "mustard greens",
+            "spacing": 1
+        },
+        {
+            "plantName": "nasturtiums",
+            "spacing": 1
+        },
+        {
+            "plantName": "okra",
+            "spacing": 1
+        },
+        {
+            "plantName": "onions (medium)",
+            "spacing": 9
+        },
+        {
+            "plantName": "onions (storage)",
+            "spacing": 4
+        },
+        {
+            "plantName": "oregano",
+            "spacing": 1
+        },
+        {
+            "plantName": "parsnips",
+            "spacing": 16
+        },
+        {
+            "plantName": "parsely",
+            "spacing": 1
+        },
+        {
+            "plantName": "peas, garden",
+            "spacing": 9,
+            "seedMonths": ["january"]
+        },
+        {
+            "plantName": "peas, sugar",
+            "spacing": 9,
+            "seedMonths": ["january"]
+        },
+        {
+            "plantName": "peppers",
+            "spacing": 1
+        },
+        {
+            "plantName": "potatoes",
+            "spacing": 1
+        },
+        {
+            "plantName": "radish",
+            "spacing": 16
+        },
+        {
+            "plantName": "rosemary",
+            "spacing": 1
+        },
+        {
+            "plantName": "rutabagas", "spacing": 4
+        },
+        {
+            "plantName": "sage",
+            "spacing": 1
+        },
+        {
+            "plantName": "savory",
+            "spacing": 1
+        },
+        {
+            "plantName": "soybeans", "spacing": 4
+        },
+        {
+            "plantName": "spinach", "spacing": 9
+        },
+        {
+            "plantName": "strawberries",
+            "spacing": 1
+        },
+        {
+            "plantName": "sunflowers",
+            "spacing": 1
+        },
+        {
+            "plantName": "sweet potatoes",
+            "spacing": 1
+        },
+        {
+            "plantName": "swiss chard", "spacing": 4
+        },
+        {
+            "plantName": "thyme",
+            "spacing": 1
+        },
+        {
+            "plantName": "tomatoes",
+            "spacing": 1
+        },
+        {
+            "plantName": "turnips", "spacing": 9
+        },
+        {
+            "plantName": "cantaloupe",
+            "spacing": 100
+        },
+        {
+            "plantName": "pumpkins",
+            "spacing": 100
+        },
+        {
+            "plantName": "watermelon",
+            "spacing": 100
+        },
+        {
+            "plantName": "winter squash",
+            "spacing": 100
+        },
+        {
+            "plantName": "zucchini",
+            "spacing": 10
+            0}
     ]
 }
