@@ -21,7 +21,6 @@ async function getInitialButtons() {
             .then(response => response.json())
             .then(data => plantsAndSpaceing.push(...data["plantsAndSpaceing"]))
     populateButtons(plantsAndSpaceing);
-    sortButtonsBySeedCount(1);
 }  
 
 function populateButtons(buttons){
@@ -32,11 +31,16 @@ function populateButtons(buttons){
 }
 
 function sortButtonsBySeedCount(seedCount){
-    const newPlantList = plantsAndSpaceing.filter((record) => {
-        console.log(record.spacing)
-        record.spacing === seedCount
+    updateSeedDisplay(seedCount);
+    const newPlantList = plantsAndSpaceing.filter(record => {
+        return record.spacing === seedCount
     })
-    
+    populateButtons(newPlantList);
+}
+
+function resetButtons() {
+    updateSeedDisplay(0);
+    populateButtons(plantsAndSpaceing);
 }
 
 getInitialButtons();
