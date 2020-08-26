@@ -19,15 +19,27 @@
             "transplantMonths": [] 
         },
         {
+            "plantName": "beans, snap",
+            "spacing": 9,
+            "seedMonths": ["march", "april", "september", "october"], 
+            "transplantMonths": [] 
+        },
+        {
+            "plantName": "beans, lima",
+            "spacing": 9,
+            "seedMonths": ["march", "april", "september", "october"], 
+            "transplantMonths": [] 
+        },
+        {
             "plantName": "beets (large)",
             "spacing": 9,
-            "seedMonths": ["january"], 
+            "seedMonths": ["march", "april", "september", "october"], 
             "transplantMonths": [] 
         },
         {
             "plantName": "beets (small)",
             "spacing": 16,
-            "seedMonths": [], 
+            "seedMonths": ["march", "april", "september", "october"], 
             "transplantMonths": [] 
         },
         {
@@ -40,25 +52,25 @@
             "plantName": "broccoli",
             "spacing": 1,
             "seedMonths": [], 
-            "transplantMonths": [] 
+            "transplantMonths": ["march", "april", "august", "september"] 
         },
         {
             "plantName": "cauliflower",
             "spacing": 1,
             "seedMonths": [],
-            "transplantMonths": ["january"]
+            "transplantMonths": ["march", "april", "august", "september"]
         },
         {
             "plantName": "cabbage",
             "spacing": 1,
             "seedMonths": [],
-            "transplantMonths": ["january"]
+            "transplantMonths": ["march", "april", "august", "september"]
         },
         {
             "plantName": "carrots",
             "spacing": 16,
-            "seedMonths": ["january"], 
-            "transplantMonths": ["january"] 
+            "seedMonths": ["march", "apirl", "may", "august", "september"], 
+            "transplantMonths": [] 
         },
         {
             "plantName": "celery",
@@ -79,8 +91,8 @@
         {
             "plantName": "collards",
             "spacing": 1,
-            "seedMonths": ["january"], 
-            "transplantMonths": ["january"] 
+            "seedMonths": [], 
+            "transplantMonths": [] 
         },
         {
             "plantName": "corn",
@@ -115,7 +127,7 @@
         {
             "plantName": "fava beans",
             "spacing": 4,
-            "seedMonths": ["january"],
+            "seedMonths": [],
             "transplantMonths": [] 
         },
         {
@@ -151,20 +163,20 @@
         {
             "plantName": "head lettuce",
             "spacing": 1,
-            "seedMonths": ["january"], 
-            "transplantMonths": ["january"] 
+            "seedMonths": [], 
+            "transplantMonths": [] 
         },
         {
             "plantName": "kale",
             "spacing": 1,
-            "seedMonths": ["january"], 
-            "transplantMonths": ["january"] 
+            "seedMonths": [], 
+            "transplantMonths": [] 
         },
         {
             "plantName": "kohlrabi",
             "spacing": 4,
-            "seedMonths": ["january"], 
-            "transplantMonths": ["january"] 
+            "seedMonths": [], 
+            "transplantMonths": [] 
         },
         {
             "plantName": "leaf lettuce",
@@ -175,8 +187,8 @@
         {
             "plantName": "leeks",
             "spacing": 9,
-            "seedMonths": ["january"], 
-            "transplantMonths": ["january"] 
+            "seedMonths": [], 
+            "transplantMonths": [] 
         },
         {
             "plantName": "lima beans",
@@ -193,8 +205,8 @@
         {
             "plantName": "mustard greens",
             "spacing": 1,
-            "seedMonths": ["january"], 
-            "transplantMonths": ["january"] 
+            "seedMonths": [], 
+            "transplantMonths": [] 
         },
         {
             "plantName": "nasturtiums",
@@ -211,8 +223,8 @@
         {
             "plantName": "onions (medium)",
             "spacing": 9,
-            "seedMonths": ["january"], 
-            "transplantMonths": ["january"] 
+            "seedMonths": [], 
+            "transplantMonths": [] 
         },
         {
             "plantName": "onions (storage)",
@@ -241,13 +253,13 @@
         {
             "plantName": "peas, garden",
             "spacing": 9,
-            "seedMonths": ["january"],
+            "seedMonths": [],
             "transplantMonths": [] 
         },
         {
             "plantName": "peas, sugar",
             "spacing": 9,
-            "seedMonths": ["january"],
+            "seedMonths": [],
             "transplantMonths": [] 
         },
         {
@@ -259,13 +271,13 @@
         {
             "plantName": "potatoes",
             "spacing": 1,
-            "seedMonths": ["january"], 
-            "transplantMonths": ["january"] 
+            "seedMonths": [], 
+            "transplantMonths": [] 
         },
         {
             "plantName": "radish",
             "spacing": 16,
-            "seedMonths": ["january"], 
+            "seedMonths": [], 
             "transplantMonths": [] 
         },
         {
@@ -301,8 +313,8 @@
         {
             "plantName": "spinach",
             "spacing": 9,
-            "seedMonths": ["january"], 
-            "transplantMonths": ["january"] 
+            "seedMonths": [], 
+            "transplantMonths": [] 
         },
         {
             "plantName": "strawberries",
@@ -325,8 +337,8 @@
         {
             "plantName": "swiss chard",
             "spacing": 4,
-            "seedMonths": ["january"], 
-            "transplantMonths": ["january"] 
+            "seedMonths": [], 
+            "transplantMonths": [] 
         },
         {
             "plantName": "thyme",
@@ -343,7 +355,7 @@
         {
             "plantName": "turnips",
             "spacing": 9,
-            "seedMonths": ["january"], 
+            "seedMonths": [], 
             "transplantMonths": [] 
         },
         {
