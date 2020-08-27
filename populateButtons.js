@@ -38,6 +38,16 @@ function sortButtonsBySeedCount(seedCount){
     populateButtons(newPlantList);
 }
 
+function sortByMonth(month){
+    updateSeedDisplay(0);
+    const newPlantList = plantsAndSpaceing.filter(record => {
+        if (record.seedMonths.includes(month) || record.transplantMonths.includes(month)){
+            return record;
+        }
+    })
+    populateButtons(newPlantList);
+}
+
 function resetButtons() {
     updateSeedDisplay(0);
     populateButtons(plantsAndSpaceing);
