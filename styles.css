@@ -44,10 +44,20 @@ body {
 .buttons-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin: 2%;
 }
 
 .plant-button {
     background-color: var(--button-color);
     font-size: 16px;
     border-radius: 10px;
+    height: 2.7rem;
+}
+
+.search-bar-input {
+    width: 80%;
+    font-size: 20px;
+    border: 1.5px solid lightgray;
+    border-radius: 6px;
+    box-shadow: 1px 1px 1px black;
 }
