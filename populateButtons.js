@@ -63,6 +63,7 @@ function filterButtons() {
             return record
         }
     });
+    updateSeedDisplay(0);
     populateButtons(newPlantList);
 }
 
