@@ -69,7 +69,4 @@ function filterButtons() {
 
 searchBarInput.addEventListener("keyup", filterButtons)
 
-
-filterButtons();
-
 getInitialButtons();
