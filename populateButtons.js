@@ -1,5 +1,7 @@
 let plantsAndSpaceing = []
 const buttonContainer = document.querySelector(".buttons-container");
+const searchBarInput = document.querySelector(".search-bar-input");
+
 
 function createButtonElement(plant) {
     let button = document.createElement("button");
@@ -52,5 +54,21 @@ function resetButtons() {
     updateSeedDisplay(0);
     populateButtons(plantsAndSpaceing);
 }
+
+
+function filterButtons() {
+    const searchingString = String(this.value).toLowerCase();
+    const newPlantList = plantsAndSpaceing.filter(record => {
+        if (record.plantName.includes(searchingString)){
+            return record
+        }
+    });
+    populateButtons(newPlantList);
+}
+
+searchBarInput.addEventListener("keyup", filterButtons)
+
+
+filterButtons();
 
 getInitialButtons();
