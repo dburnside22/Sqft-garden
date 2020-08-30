@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+
 :root {
     --text-color: #213A82;
     --seed-color: #698D68;
     --border-color: #A36D00;
-    --button-color: #C1CC99;
+    --button-color: #B7CCB9;
 }
 
 
@@ -44,13 +47,16 @@ body {
 .buttons-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: .9rem;
     margin: 2%;
 }
 
 .plant-button {
+    font-family: 'Rancho', cursive;
+    text-transform: capitalize;
     background-color: var(--button-color);
     font-size: 16px;
-    border-radius: 10px;
+    border-radius: 50px;
     height: 2.7rem;
 }
 
