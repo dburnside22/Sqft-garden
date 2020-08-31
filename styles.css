@@ -26,9 +26,11 @@ body {
     font-size: 30px;
     line-height: 37px;
     position: absolute;
+    transform-origin: 0%;
     transform: rotate(-90deg);
     left: 53px;
     top: 105px;
+    text-transform: capitalize;
 }
 
 

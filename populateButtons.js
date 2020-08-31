@@ -7,8 +7,9 @@ function createButtonElement(plant) {
     let button = document.createElement("button");
     button.classList.add('plant-button')
     button.innerHTML = plant.plantName;
-    button.addEventListener("click",function(){
+    button.addEventListener("click", function(){
         updateSeedDisplay(plant.spacing);
+        updatePlantLabel(plant.plantName);
     })
     return button;
 }

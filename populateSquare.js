@@ -1,6 +1,7 @@
 let seedCount = 0;
 const seedContainer = document.querySelector('.square-container');
 const seedContainerClassNames = ['fourSeeds', 'nineSeeds', 'sixteenSeeds']
+const plantNameContainer = document.querySelector(".plantName")
 
 function createSeedElement() {
     let seed = document.createElement("div");
@@ -42,4 +43,8 @@ function updateSeedDisplay(seedNumberToDisplay){
             seedNumberToDisplay - seedCount > 0 ? addSeed() : removeSeed();
         }  
     }
+}
+
+function updatePlantLabel(plantName) {
+    plantNameContainer.innerHTML = plantName;         
 }
