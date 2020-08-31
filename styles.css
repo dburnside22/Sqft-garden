@@ -10,16 +10,25 @@
     --light-background: #FBF6EF;
 }
 
-
 body {
     color: var(--text-color);
     text-align: center;
+    font-family: 'Rancho', cursive;
 }
 
 .title {
     color: var(--text-color);
     font-family: 'Sacramento', cursive;
     font-size: 27px;
+}
+
+.plantName {
+    font-size: 30px;
+    line-height: 37px;
+    position: absolute;
+    transform: rotate(-90deg);
+    left: 53px;
+    top: 105px;
 }
 
 
