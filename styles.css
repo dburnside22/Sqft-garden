@@ -8,6 +8,7 @@
     --button-color: #B7CCB9;
     --dark-green: #81A684;
     --light-background: #FBF6EF;
+    --pink-color: #E94959;
 }
 
 body {
@@ -81,6 +82,10 @@ body {
     border: 1px solid var(--dark-green);
     height: 2.7rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.active {
+    background-color: var(--pink-color);
 }
 
 .search-bar-input {
