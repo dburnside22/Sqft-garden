@@ -28,8 +28,8 @@ body {
     position: absolute;
     transform-origin: 0%;
     transform: rotate(-90deg);
-    left: 53px;
-    top: 105px;
+    left: 105px;
+    top: 165px;
     text-transform: capitalize;
 }
 
