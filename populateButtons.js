@@ -1,6 +1,7 @@
 let plantsAndSpaceing = []
 const buttonContainer = document.querySelector(".buttons-container");
 const searchBarInput = document.querySelector(".search-bar-input");
+let selectedButton;
 
 
 function createButtonElement(plant) {
@@ -10,6 +11,9 @@ function createButtonElement(plant) {
     button.addEventListener("click", function(){
         updateSeedDisplay(plant.spacing);
         updatePlantLabel(plant.plantName);
+        if (selectedButton) selectedButton.classList.remove('active');
+        selectedButton = this;
+        this.classList.add('active');
     })
     return button;
 }
