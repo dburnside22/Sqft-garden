@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SQFT Gardening</title>
+    <link href="hamburgers.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button class="menu-button hamburger--spin" type="button" onclick="toggleMenu()">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+    </button>
     <h1 class="title">Square Foot Garden Spacing</h1>
     <h3 class="plantName"></h3>
     <seciton style="display: flex; justify-content: center;">
@@ -42,5 +48,6 @@
 
     <script src="populateSquare.js"></script>
     <script src="populateButtons.js"></script>
+    <script src="menu.js"></script>
 </body>
 </html>
