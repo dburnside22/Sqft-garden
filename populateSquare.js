@@ -48,3 +48,7 @@ function updateSeedDisplay(seedNumberToDisplay){
 function updatePlantLabel(plantName) {
     plantNameContainer.innerHTML = plantName;         
 }
+
+function resetPlantLabel() {
+    plantNameContainer.innerHTML = "";
+}
