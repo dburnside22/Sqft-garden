@@ -17,6 +17,38 @@ body {
     font-family: 'Rancho', cursive;
 }
 
+.menu {
+    right: 0%;
+}
+
+.menu > button {
+    display: none;
+}
+
+.menu.is-active {
+   display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: end;
+    margin: 0 0 auto auto;
+    position: absolute;
+    top: 8%;
+    right: 2%;
+    background-color: var(--pink-color);
+    transition: .5s;
+} 
+
+.menu.is-active > button {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    text-shadow: 1px 1px black;
+    font-size: 16px;
+    padding: 3%;
+}
+
+
 .title {
     color: var(--text-color);
     font-family: 'Sacramento', cursive;
