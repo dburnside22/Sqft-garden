@@ -70,6 +70,9 @@ function sortByMonth(month){
     });
     toggleMenu();
     populateButtons(newPlantList);
+    clearSearchBar();
+    resetPlantLabel();
+    addMonthLabel(month);
 }
 
 function resetButtons() {
@@ -82,6 +85,7 @@ function resetButtons() {
     populateButtons(plantsAndSpaceing);
     resetPlantLabel();
     clearSearchBar();
+    resetMonthLabel();
 }
 
 function filterButtons() {
