@@ -46,8 +46,8 @@ body {
     border: none;
     color: white;
     text-shadow: 1px 1px black;
-    font-size: 16px;
-    padding: 3%;
+    font-size: 20px;
+    padding: 3% 10%;
 }
 
 
@@ -63,8 +63,8 @@ body {
     position: absolute;
     transform-origin: 0%;
     transform: rotate(-90deg);
-    left: 105px;
-    top: 165px;
+    left: 23%;
+    top: 31%;
     text-transform: capitalize;
 }
 
