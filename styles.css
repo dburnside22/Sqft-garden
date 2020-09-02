@@ -141,7 +141,7 @@ body {
 .refresh {
     background: none;
     border: none;
-    transition: all 2s;
+    transition: all 1s;
 }
 
 .refresh.is-active {
