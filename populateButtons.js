@@ -67,7 +67,8 @@ function sortByMonth(month){
         if (record.seedMonths.includes(month) || record.transplantMonths.includes(month)){
             return record;
         }
-    })
+    });
+    toggleMenu();
     populateButtons(newPlantList);
 }
 
@@ -79,6 +80,8 @@ function resetButtons() {
     }
     updateSeedDisplay(0);
     populateButtons(plantsAndSpaceing);
+    resetPlantLabel();
+    clearSearchBar();
 }
 
 function filterButtons() {
@@ -94,6 +97,10 @@ function filterButtons() {
     resetPlantLabel();
     updateSeedDisplay(0);
     populateButtons(newPlantList);
+}
+
+function clearSearchBar() {
+    searchBarInput.value = "";
 }
 
 searchBarInput.addEventListener("keyup", filterButtons);
