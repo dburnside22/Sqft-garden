@@ -148,3 +148,12 @@ body {
     transform: rotate(360deg);
     transform-origin: center center;
 }
+
+.menu-label {
+    position: absolute;
+    top: 49%;
+    left: 25%;
+    color: var(--pink-color);
+    font-size: 24px;
+    text-transform: capitalize;
+}
