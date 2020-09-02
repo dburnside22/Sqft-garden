@@ -1,6 +1,8 @@
 let isMenuOpen = false;
 const menuButton = document.querySelector(".menu-button");
 const menu = document.querySelector(".menu");
+const monthLabelContainer = document.querySelector(".month-labels");
+let menuLabel = 0;
 
 
 function toggleMenu(){
@@ -14,4 +16,26 @@ function toggleMenu(){
         menu.classList.add("is-active");
     }
     isMenuOpen = !isMenuOpen;
+}
+
+function createMenuElement(monthName) {
+    let label = document.createElement("p");
+    label.classList.add('menu-label');
+    label.innerHTML = monthName;
+    return label;
+}
+
+function addMonthLabel(monthName){
+    const newMonthLabel = createMenuElement(monthName);
+    if (menuLabel > 0) {
+        monthLabelContainer.removeChild(monthLabelContainer.lastElementChild);
+        menuLabel--;
+    }
+    monthLabelContainer.appendChild(newMonthLabel);
+    menuLabel++;
+}
+
+function resetMonthLabel(){
+    monthLabelContainer.removeChild(monthLabelContainer.lastElementChild);
+    menuLabel--;
 }
