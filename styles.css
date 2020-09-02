@@ -141,4 +141,10 @@ body {
 .refresh {
     background: none;
     border: none;
+    transition: all 2s;
+}
+
+.refresh.is-active {
+    transform: rotate(360deg);
+    transform-origin: center center;
 }

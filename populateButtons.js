@@ -1,6 +1,7 @@
 let plantsAndSpaceing = []
 const buttonContainer = document.querySelector(".buttons-container");
 const searchBarInput = document.querySelector(".search-bar-input");
+const refreshButton = document.querySelector(".refresh");
 let selectedButton;
 
 function buttonFunction(spacing, plantName, buttonClicked){
@@ -71,6 +72,11 @@ function sortByMonth(month){
 }
 
 function resetButtons() {
+    if (refreshButton.classList.contains("is-active")){
+        refreshButton.classList.remove("is-active");
+    } else {
+        refreshButton.classList.add("is-active");
+    }
     updateSeedDisplay(0);
     populateButtons(plantsAndSpaceing);
 }
