@@ -36,6 +36,8 @@ function addMonthLabel(monthName){
 }
 
 function resetMonthLabel(){
-    monthLabelContainer.removeChild(monthLabelContainer.lastElementChild);
-    menuLabel--;
+    if (monthLabelContainer.lastElementChild){
+        monthLabelContainer.removeChild(monthLabelContainer.lastElementChild);
+        menuLabel--;
+    }
 }
