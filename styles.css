@@ -151,8 +151,8 @@ body {
 
 .menu-label {
     position: absolute;
-    top: 49%;
-    left: 25%;
+    top: 325px;
+    left: 77%;
     color: var(--pink-color);
     font-size: 24px;
     text-transform: capitalize;
