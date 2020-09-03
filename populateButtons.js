@@ -81,6 +81,10 @@ function resetButtons() {
     } else {
         refreshButton.classList.add("is-active");
     }
+}
+
+function resetAll() {
+    toggleResetActive();
     updateSeedDisplay(0);
     populateButtons(plantsAndSpaceing);
     resetPlantLabel();
