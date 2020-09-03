@@ -5,7 +5,7 @@ const refreshButton = document.querySelector(".refresh");
 let selectedButton;
 
 function buttonFunction(spacing, plantName, buttonClicked){
-    searchBarInput.innerHTML = "";
+    clearSearchBar();
     updateSeedDisplay(spacing);
     updatePlantLabel(plantName);
     toggleActive(buttonClicked)
