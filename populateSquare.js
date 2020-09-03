@@ -22,7 +22,7 @@ function removeSeed(){
     }
 }
 
-function addAndRemoveClassNames(seedNumberToDisplay){
+function manageSquareClassNames(seedNumberToDisplay){
     seedContainerClassNames.forEach(name => {
         if(seedContainer.classList.contains(name)){
             seedContainer.classList.remove(name);
@@ -37,7 +37,7 @@ function addAndRemoveClassNames(seedNumberToDisplay){
 function updateSeedDisplay(seedNumberToDisplay){
     if(seedNumberToDisplay >= 0 && seedNumberToDisplay !== 100){
         if (seedNumberToDisplay != seedCount) {
-            addAndRemoveClassNames(seedNumberToDisplay)
+            manageSquareClassNames(seedNumberToDisplay)
         }    
         while(seedNumberToDisplay != (seedCount)){
             seedNumberToDisplay - seedCount > 0 ? addSeed() : removeSeed();
