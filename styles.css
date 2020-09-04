@@ -11,6 +11,10 @@
     --pink-color: #E94959;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--text-color);
     text-align: center;

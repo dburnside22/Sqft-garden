@@ -27,7 +27,7 @@ function toggleActive(buttonClicked) {
 }
 
 function scrollToTopOfPage() {
-    window.scrollTo(0, 0, {behavior: "smooth"});
+    window.scrollTo(0, 0);
 }
 
 function createButtonElement(plant) {
