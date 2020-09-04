@@ -67,7 +67,7 @@ body {
     position: absolute;
     transform-origin: 0%;
     transform: rotate(-90deg);
-    left: 123px;
+    left: 20%;
     top: 220px;
     text-transform: capitalize;
 }
