@@ -8,7 +8,7 @@ function buttonFunction(spacing, plantName, buttonClicked){
     clearSearchBar();
     updateSeedDisplay(spacing);
     updatePlantLabel(plantName);
-    toggleActive(buttonClicked)
+    toggleActive(buttonClicked);
 }
 
 function toggleActive(buttonClicked) {
@@ -17,11 +17,17 @@ function toggleActive(buttonClicked) {
         selectedButton = "";
         resetPlantLabel();
         updateSeedDisplay(0);
+        scrollToTopOfPage();
     } else {
         if (selectedButton) selectedButton.classList.remove('active');
         selectedButton = buttonClicked;
         selectedButton.classList.add('active');
+        scrollToTopOfPage();
     }
+}
+
+function scrollToTopOfPage() {
+    window.scrollTo(0, 0, {behavior: "smooth"});
 }
 
 function createButtonElement(plant) {
@@ -30,6 +36,7 @@ function createButtonElement(plant) {
     button.innerHTML = plant.plantName;
     button.addEventListener("click", function(){
         buttonFunction(plant.spacing, plant.plantName, this);
+
     })
     return button;
 }
