@@ -1,7 +1,9 @@
 let seedCount = 0;
 const seedContainer = document.querySelector('.square-container');
 const seedContainerClassNames = ['fourSeeds', 'nineSeeds', 'sixteenSeeds']
-const plantNameContainer = document.querySelector(".plantName")
+const plantNameContainer = document.querySelector(".plantName");
+const additionalSquaresNeeded = document.querySelector(".additionalSquaresNeeded");
+let showingAdditionalSquaresNote = false;
 
 function createSeedElement() {
     let seed = document.createElement("div");
@@ -17,6 +19,13 @@ function addSeed(){
 
 function removeSeed(){
     if (seedCount > 0){
+        seedContainer.removeChild(seedContainer.lastElementChild);
+        seedCount--;
+    }
+}
+
+function removeAllSeeds(){
+    while (seedCount > 0){
         seedContainer.removeChild(seedContainer.lastElementChild);
         seedCount--;
     }
@@ -42,6 +51,11 @@ function updateSeedDisplay(seedNumberToDisplay){
         while(seedNumberToDisplay != (seedCount)){
             seedNumberToDisplay - seedCount > 0 ? addSeed() : removeSeed();
         }  
+    } else if (seedNumberToDisplay === 100) {
+        removeAllSeeds();
+        addSeed();
+        manageSquareClassNames(1);
+        toggleAdditionalSpaceNote();
     }
 }
 
@@ -51,4 +65,14 @@ function updatePlantLabel(plantName) {
 
 function resetPlantLabel() {
     plantNameContainer.innerHTML = "";
+}
+
+function toggleAdditionalSpaceNote() {
+    if (!showingAdditionalSquaresNote) {
+        additionalSquaresNeeded.innerHTML = "Additional Squares are need for this plant";
+        showingAdditionalSquaresNote = true
+    } else {
+        additionalSquaresNeeded.innerHTML = "";
+        showingAdditionalSquaresNote = false;
+    }
 }
