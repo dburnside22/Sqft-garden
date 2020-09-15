@@ -142,7 +142,7 @@
             "plantName": "garlic",
             "spacing": 9,
             "seedMonths": [], 
-            "transplantMonths": [] 
+            "transplantMonths": ["september", "october"] 
         },
         {
             "plantName": "green beans",
