@@ -36,8 +36,7 @@ function createButtonElement(plant) {
     button.innerHTML = plant.plantName;
     button.addEventListener("click", function(){
         buttonFunction(plant.spacing, plant.plantName, this);
-
-    })
+    });
     return button;
 }
 
