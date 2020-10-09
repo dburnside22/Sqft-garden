@@ -1,6 +1,5 @@
 let plantsAndSpaceing = [];
 const buttonContainer = document.querySelector(".buttons-container");
-const searchBarInput = document.querySelector(".search-bar-input");
 const refreshButton = document.querySelector(".refresh");
 let selectedButton;
 
@@ -63,7 +62,6 @@ function toggleResetActive() {
   }
 }
 
-
 function filterButtons() {
   const searchingString = String(this.value).toLowerCase();
   if (searchingString === "") {
@@ -79,11 +77,6 @@ function filterButtons() {
   populateButtons(newPlantList);
 }
 
-// Search bar stuff
-function clearSearchBar() {
-  searchBarInput.value = "";
-}
 
-searchBarInput.addEventListener("keyup", filterButtons);
 
 getInitialButtons();
