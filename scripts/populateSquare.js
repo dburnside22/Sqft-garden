@@ -61,7 +61,7 @@ function updateSeedDisplay(seedNumberToDisplay){
 function toggleAdditionalSpaceNote() {
     if (!showingAdditionalSquaresNote) {
         additionalSquaresNeeded.innerHTML = "Additional Squares are need for this plant";
-        showingAdditionalSquaresNote = true
+        showingAdditionalSquaresNote = true;
     } else {
         additionalSquaresNeeded.innerHTML = "";
         showingAdditionalSquaresNote = false;
