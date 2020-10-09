@@ -1,7 +1,6 @@
 let seedCount = 0;
 const seedContainer = document.querySelector('.square-container');
 const seedContainerClassNames = ['fourSeeds', 'nineSeeds', 'sixteenSeeds']
-const plantNameContainer = document.querySelector(".plantName");
 const additionalSquaresNeeded = document.querySelector(".additionalSquaresNeeded");
 let showingAdditionalSquaresNote = false;
 
@@ -57,14 +56,6 @@ function updateSeedDisplay(seedNumberToDisplay){
         manageSquareClassNames(1);
         toggleAdditionalSpaceNote();
     }
-}
-
-function updatePlantLabel(plantName) {
-    plantNameContainer.innerHTML = plantName;         
-}
-
-function resetPlantLabel() {
-    plantNameContainer.innerHTML = "";
 }
 
 function toggleAdditionalSpaceNote() {

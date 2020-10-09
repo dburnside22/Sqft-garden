@@ -26,10 +26,6 @@ function toggleActive(buttonClicked) {
   }
 }
 
-function scrollToTopOfPage() {
-  window.scrollTo(0, 0);
-}
-
 function createButtonElement(plant) {
   let button = document.createElement("button");
   button.classList.add("plant-button");
@@ -67,14 +63,6 @@ function toggleResetActive() {
   }
 }
 
-function resetAll() {
-  toggleResetActive();
-  updateSeedDisplay(0);
-  populateButtons(plantsAndSpaceing);
-  resetPlantLabel();
-  clearSearchBar();
-  resetMonthLabel();
-}
 
 function filterButtons() {
   const searchingString = String(this.value).toLowerCase();
@@ -91,6 +79,7 @@ function filterButtons() {
   populateButtons(newPlantList);
 }
 
+// Search bar stuff
 function clearSearchBar() {
   searchBarInput.value = "";
 }
