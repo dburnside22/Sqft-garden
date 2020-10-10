@@ -1,90 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SQFT Gardening</title>
-    <link rel="stylesheet" href="./styles/hamburgers.css" >
-    <link rel="stylesheet" href="./styles/styles.css">
-</head>
-<body>
-    <button class="menu-button hamburger--spin" type="button" onclick="toggleMenu()">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-    </button>
-    <h1 class="title">Square Foot Garden Spacing</h1>
-    <h3 class="plantName"></h3>
-    <p class="additionalSquaresNeeded"></p>
-    <div style="display: flex; justify-content: center;">
-        <div class="square-container">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SQFT Gardening</title>
+        <link rel="stylesheet" href="./styles/hamburgers.css" >
+        <link rel="stylesheet" href="./styles/styles.css">
+    </head>
+    <body>
+        <button class="menu-button hamburger--spin" type="button" onclick="toggleMenu()">
+            <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <h1 class="title">Square Foot Garden Spacing</h1>
+        <h2 class="plantName"></h2>
+        <p class="additionalSquaresNeeded"></p>
+        <div style="display: flex; justify-content: center;">
+            <div class="square-container">
+            </div>
+        </div> 
+
+        <div class="search-bar">
+            <input type="text" class="search-bar-input" placeholder="Enter plant name">
+        </div>  
+
+        <div class="month-labels">
         </div>
-    </div> 
 
-    <div class="search-bar">
-        <input type="text" class="search-bar-input" placeholder="Enter plant name">
-    </div>  
-
-    <div class="month-labels">
-
-    </div>
-    
-    <button class="refresh" onclick="resetAll()">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-            width="30" height="30"
-            viewBox="0 0 226 226"
-            style="fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-                <path d="M0,226v-226h226v226z" fill="none"></path>
-                <g fill="#e94959">
-                    <path d="M113,22.6c-22.36347,
-                        0 -42.91875,8.1619 -58.70703,
-                        21.65833c-2.15492,1.71551 -3.20193,
-                        4.47024 -2.73046,7.18398c0.47147,
-                        2.71374 2.38626,4.9539 4.99353,
-                        5.84205c2.60727,0.88815 5.4914,
-                        0.28272 7.52144,-1.57889c13.16985,
-                        -11.2581 30.21426,-18.0388 48.92253,
-                        -18.0388c39.14742,0 71.19745,
-                        29.66571 74.9655,67.8h-22.23216l30.13333,   
-                        45.2l30.13333,-45.2h-22.98255c-3.85175,
-                        -46.3175 -42.7244,-82.86667 -90.01745,
-                        -82.86667zM30.13333,75.33333l-30.13333,
-                        45.2h22.98255c3.85175,46.3175 42.72439,
-                        82.86667 90.01745,82.86667c22.36347,
-                        0 42.91876,-8.1619 58.70703,
-                        -21.65833c2.15494,-1.7155 3.20195,
-                        -4.47024 2.73049,-7.18398c-0.47147,
-                        -2.71375 -2.38626,-4.95391 -4.99354,
-                        -5.84207c-2.60728,-0.88815 -5.49141,
-                        -0.28271 -7.52145,1.57892c-13.16986,
-                        11.2581 -30.21426,18.0388 -48.92253,
-                        18.0388c-39.14742,0 -71.19745,
-                        -29.66571 -74.96549,-67.8h22.23216z">
-                    </path>
+        <div class="menu">
+            <button onclick="sortByMonth('january')">January</button>
+            <button onclick="sortByMonth('february')">February</button>
+            <button onclick="sortByMonth('march')">March</button>
+            <button onclick="sortByMonth('april')">April</button>
+            <button onclick="sortByMonth('may')">May</button>
+            <button onclick="sortByMonth('june')">June</button>
+            <button onclick="sortByMonth('july')">July</button>
+            <button onclick="sortByMonth('august')">August</button>
+            <button onclick="sortByMonth('september')">September</button>
+            <button onclick="sortByMonth('october')">October</button>
+            <button onclick="sortByMonth('november')">November</button>
+            <button onclick="sortByMonth('december')">December</button>
+        </div>
+        
+        <button class="refresh" onclick="resetAll()">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="30" height="30"
+                viewBox="0 0 226 226"
+                style="fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                    <path d="M0,226v-226h226v226z" fill="none"></path>
+                    <g fill="#e94959">
+                        <path d="M113,22.6c-22.36347,
+                            0 -42.91875,8.1619 -58.70703,
+                            21.65833c-2.15492,1.71551 -3.20193,
+                            4.47024 -2.73046,7.18398c0.47147,
+                            2.71374 2.38626,4.9539 4.99353,
+                            5.84205c2.60727,0.88815 5.4914,
+                            0.28272 7.52144,-1.57889c13.16985,
+                            -11.2581 30.21426,-18.0388 48.92253,
+                            -18.0388c39.14742,0 71.19745,
+                            29.66571 74.9655,67.8h-22.23216l30.13333,   
+                            45.2l30.13333,-45.2h-22.98255c-3.85175,
+                            -46.3175 -42.7244,-82.86667 -90.01745,
+                            -82.86667zM30.13333,75.33333l-30.13333,
+                            45.2h22.98255c3.85175,46.3175 42.72439,
+                            82.86667 90.01745,82.86667c22.36347,
+                            0 42.91876,-8.1619 58.70703,
+                            -21.65833c2.15494,-1.7155 3.20195,
+                            -4.47024 2.73049,-7.18398c-0.47147,
+                            -2.71375 -2.38626,-4.95391 -4.99354,
+                            -5.84207c-2.60728,-0.88815 -5.49141,
+                            -0.28271 -7.52145,1.57892c-13.16986,
+                            11.2581 -30.21426,18.0388 -48.92253,
+                            18.0388c-39.14742,0 -71.19745,
+                            -29.66571 -74.96549,-67.8h22.23216z">
+                        </path>
+                    </g>
                 </g>
-            </g>
-        </svg>
-    </button>
+            </svg>
+        </button>
 
-    <div class="buttons-container">
-    </div>
+        <div class="buttons-container">
+        </div>
 
-    <div class="menu">
-        <button onclick="sortByMonth('january')">January</button>
-        <button onclick="sortByMonth('february')">February</button>
-        <button onclick="sortByMonth('march')">March</button>
-        <button onclick="sortByMonth('april')">April</button>
-        <button onclick="sortByMonth('may')">May</button>
-        <button onclick="sortByMonth('june')">June</button>
-        <button onclick="sortByMonth('july')">July</button>
-        <button onclick="sortByMonth('august')">August</button>
-        <button onclick="sortByMonth('september')">September</button>
-        <button onclick="sortByMonth('october')">October</button>
-        <button onclick="sortByMonth('november')">November</button>
-        <button onclick="sortByMonth('december')">December</button>
-    </div>
+        <div class="calendar-display">
+        </div> 
 
-    
         <script src="./scripts/populateSquare.js"></script>
         <script src="./scripts/populateButtons.js"></script>
         <script src="./scripts/sortButtons.js"></script>
@@ -93,23 +94,3 @@
         <script src="./scripts/searchBar.js"></script>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <button onclick="resetButtons()">Reset</button>
-<button onclick="sortButtonsBySeedCount(1)">1 Seed</button>
-<button onclick="sortButtonsBySeedCount(4)">4 Seeds</button>
-<button onclick="sortButtonsBySeedCount(9)">9 Seeds</button>
-<button onclick="sortButtonsBySeedCount(16)">16 Seeds</button>
- -->
