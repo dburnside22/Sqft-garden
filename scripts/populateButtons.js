@@ -6,22 +6,7 @@ function buttonFunction(spacing, plantName, buttonClicked) {
   clearSearchBar();
   updateSeedDisplay(spacing);
   updatePlantLabel(plantName);
-  toggleActive(buttonClicked);
-}
-
-function toggleActive(buttonClicked) {
-  if (selectedButton === buttonClicked) {
-    selectedButton.classList.remove("active");
-    selectedButton = "";
-    resetPlantLabel();
-    updateSeedDisplay(0);
-    scrollToTopOfPage();
-  } else {
-    if (selectedButton) selectedButton.classList.remove("active");
-    selectedButton = buttonClicked;
-    selectedButton.classList.add("active");
-    scrollToTopOfPage();
-  }
+  scrollToTopOfPage();
 }
 
 function createButtonElement(plant) {
