@@ -1,5 +1,6 @@
 let plantsAndSpaceing = [];
 const buttonContainer = document.querySelector(".buttons-container");
+let currentButtonsDisplayed;
 
 function buttonFunction(spacing, plantName) {
   clearSearchBar();
@@ -24,6 +25,8 @@ function addButton(plant) {
 }
 
 function populateButtons(buttons) {
+  if (currentButtonsDisplayed === buttons) return;
+  currentButtonsDisplayed = buttons;
   buttonContainer.innerHTML = "";
   buttons.forEach((button) => {
     addButton(button);
@@ -32,9 +35,8 @@ function populateButtons(buttons) {
 
 function filterButtons() {
   const searchingString = String(this.value).toLowerCase();
-  if (searchingString === "") {
-    return;
-  }
+  if (searchingString === "") return;
+
   const newPlantList = plantsAndSpaceing.filter((record) => {
     if (record.plantName.includes(searchingString)) {
       return record;
