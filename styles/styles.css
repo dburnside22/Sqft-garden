@@ -105,7 +105,7 @@ body {
 }
 
 .buttons-container {
-    display: none;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: .9rem;
     margin: 2%;
@@ -160,6 +160,10 @@ body {
     color: var(--pink-color);
     font-size: 24px;
     text-transform: capitalize;
+}
+
+.calendar-display {
+    display: none;
 }
 
 .calendar-display > .row{
