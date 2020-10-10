@@ -7,6 +7,7 @@ function buttonFunction(spacing, plantName) {
   scrollToTopOfPage();
   updateSeedDisplay(spacing);
   updatePlantLabel(plantName);
+  clearButtons();
 }
 
 function createButtonElement(plant) {
@@ -31,6 +32,11 @@ function populateButtons(buttons) {
   buttons.forEach((button) => {
     addButton(button);
   });
+}
+
+function clearButtons() {
+  currentButtonsDisplayed = [];
+  buttonContainer.innerHTML = "";
 }
 
 function filterButtons() {
