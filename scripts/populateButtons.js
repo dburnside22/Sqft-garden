@@ -3,9 +3,9 @@ const buttonContainer = document.querySelector(".buttons-container");
 
 function buttonFunction(spacing, plantName) {
   clearSearchBar();
+  scrollToTopOfPage();
   updateSeedDisplay(spacing);
   updatePlantLabel(plantName);
-  scrollToTopOfPage();
 }
 
 function createButtonElement(plant) {
