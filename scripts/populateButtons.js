@@ -9,7 +9,7 @@ function buttonFunction(spacing, plantName, plant) {
   updatePlantLabel(plantName);
   clearButtons();
   toggleCalendarViewDisplaying();
-  updateIcons(plant);
+  populateIcons(plant);
 }
 
 function createButtonElement(plant) {
