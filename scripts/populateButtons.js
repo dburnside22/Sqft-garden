@@ -2,12 +2,14 @@ let plantsAndSpaceing = [];
 const buttonContainer = document.querySelector(".buttons-container");
 let currentButtonsDisplayed;
 
-function buttonFunction(spacing, plantName) {
+function buttonFunction(spacing, plantName, plant) {
   clearSearchBar();
   scrollToTopOfPage();
   updateSeedDisplay(spacing);
   updatePlantLabel(plantName);
   clearButtons();
+  toggleCalendarViewDisplaying();
+  populateIcons(plant);
 }
 
 function createButtonElement(plant) {
@@ -15,7 +17,7 @@ function createButtonElement(plant) {
   button.classList.add("plant-button");
   button.innerHTML = plant.plantName;
   button.addEventListener("click", function () {
-    buttonFunction(plant.spacing, plant.plantName);
+    buttonFunction(plant.spacing, plant.plantName, plant);
   });
   return button;
 }

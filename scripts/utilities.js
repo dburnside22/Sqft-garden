@@ -12,6 +12,7 @@ function resetAll() {
   resetPlantLabel();
   clearSearchBar();
   resetMonthLabel();
+  hideCalendarView();
 }
 
 function updatePlantLabel(plantName) {
