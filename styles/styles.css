@@ -166,19 +166,29 @@ body {
     display: none;
 }
 
-.calendar-display > .row{
+.calendar-display > .row {
     display: flex;
     justify-content: space-evenly;
     
 }
 
+.row > h3 {
+    margin: 8px auto;
+}
+
 .icons {
     display: flex;
     flex-direction: column;
+    height: 100px;
+    width: 26px;
 }
 
-.icons > img{
+.icons > img {
     width: 20px;
     height: 20px;
     margin: 6px auto;
+}
+
+.icons > .hide {
+    opacity: 0;
 }
