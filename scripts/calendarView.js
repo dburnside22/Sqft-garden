@@ -1,5 +1,9 @@
 const calendarViewContainer = document.querySelector(".calendar-display");
 let calendarViewDisplaying = false;
+let showingTransplantIcons = [];
+let showingPlantIcons = [];
+let showingHouseIcons = [];
+
 
 function toggleCalendarViewDisplaying(){
     (!calendarViewDisplaying) ? showCalendarView() : hideCalendarView();
@@ -21,34 +25,55 @@ function showCalendarView() {
 // row so I am going to have to make divs that dont change
 // and show and hide the icons?
 
-function updateIcons(plant){
+function populateIcons(plant){
     updateTransplantIcons(plant);
+    getSeedMonths(plant);
+    // getPlantIndoorMonths(plant);
 }
 
 function updateTransplantIcons(plant){
-    // get all the data-icons={month}
-    // add the Transplant icon to them
-    // or unhide them?
-    const months = getTransplantMonths(plant);
+    const months = plant.transplantMonths;
+    if (showingTransplantIcons === months) return;
+    if (showingTransplantIcons.length > 0) clearIcons(3);
     months.forEach(month => {
-        const monthSelector = document.querySelector([`[data-icons=${month}]`]);
-        console.log(month, monthSelector);
-        monthSelector.innerHTML = "X";
+        const iconSelector = document.querySelector([`[data-icons=${month}]>img:nth-child(3)`]);
+        if (!showingTransplantIcons.includes(month)){
+            iconSelector.classList.remove("hide");
+        }
     });
-
-}
-
-
-
-
-
-
-function getTransplantMonths(plant){
-    return plant.transplantMonths;
+    showingTransplantIcons = months;
 }
 
 function getSeedMonths(plant){
-
+    const months = plant.seedMonths;
+    if (showingPlantIcons === months) return;
+    if (showingPlantIcons.length > 0) clearIcons(2);
+    months.forEach(month => {
+        const iconSelector = document.querySelector([`[data-icons=${month}]>img:nth-child(2)`]);
+        if (!showingPlantIcons.includes(month)){
+            iconSelector.classList.remove("hide");
+        }
+    });
+    showingPlantIcons = months;
 }
 
-function getPlantIndoorMonths(plant){}
+
+// function getPlantIndoorMonths(plant){ 
+//     const months = plant.houseMonths;
+//     if (showingHouseIcons === months) return;
+//     if (showingHouseIcons.length > 0) clearIcons(1);
+//     months.forEach(month => {
+//         const iconSelector = document.querySelector([`[data-icons=${month}]>img:nth-child(1)`]);
+//         if (!showingHouseIcons.includes(month)){
+//             iconSelector.classList.remove("hide");
+//         }
+//     });
+//     showingHouseIcons = months;
+// }
+
+function clearIcons(iconOrder) {
+    allTheIcons = document.querySelectorAll([`[data-icons]>img:nth-child(${iconOrder})`]);
+    allTheIcons.forEach((icon) => {
+        if (!icon.classList.contains('hide')) icon.classList.add('hide');
+    }); 
+}
