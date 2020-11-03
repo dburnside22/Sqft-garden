@@ -192,3 +192,9 @@ body {
 .icons > .hide {
     opacity: 0;
 }
+
+.admin-view-record {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
