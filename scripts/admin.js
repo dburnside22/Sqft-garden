@@ -1,18 +1,21 @@
 let plantData = [];
+const adminView = document.querySelector(".admin-view");
+
+const icons = ["house", "plant", "seed"];
 
 const monthButtonLabels = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
+	"Jan",
+	"Feb",
+	"Mar",
+	"Apr",
+	"May",
+	"Jun",
+	"Jul",
+	"Aug",
+	"Sep",
+	"Oct",
+	"Nov",
+	"Dec",
 ];
 
 // add a row with plant name, and lines for all three categories, with boxes for each month
