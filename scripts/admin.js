@@ -18,10 +18,44 @@ const monthButtonLabels = [
 	"Dec",
 ];
 
-// add a row with plant name, and lines for all three categories, with boxes for each month
-// each box should toggle the month and update the database
+function toggleMonth(plantData, month, icon) {
+	// I now have a all the info I would need to update the record in firebase
+	console.log(plantData, month, icon);
+}
 
-// Get the plant data
+function createAdminRecord(plantInfo) {
+	let adminRecordContainer = document.createElement("div");
+	let recordTitle = document.createElement("h2");
+	recordTitle.innerHTML = plantInfo.plantName;
+	adminRecordContainer.appendChild(recordTitle);
+
+	icons.forEach((icon) => {
+		let iconRow = document.createElement("div");
+		iconRow.classList.add("admin-view-row");
+		let iconImage = document.createElement("img");
+		iconImage.src = `./pngs/${icon}.png`;
+		iconRow.appendChild(iconImage);
+		let calendarButtons = document.createElement("div");
+		monthButtonLabels.forEach((month) => {
+			let monthButton = document.createElement("button");
+			monthButton.innerHTML = `${month}`;
+			monthButton.addEventListener("click", function () {
+				toggleMonth(plantInfo, month, icon);
+			});
+			calendarButtons.appendChild(monthButton);
+		});
+		iconRow.appendChild(calendarButtons);
+		adminRecordContainer.appendChild(iconRow);
+	});
+
+	adminView.appendChild(adminRecordContainer);
+}
+
+function generatePlantAdminView(plantData) {
+	plantData.forEach((plant) => {
+		createAdminRecord(plant);
+	});
+}
 
 async function getInitialPlantData() {
 	await fetch("refereneces/squareFootGardenData.json")
