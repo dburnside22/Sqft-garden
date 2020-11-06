@@ -23,15 +23,12 @@ const monthButtonLabels = [
 
 // Get the plant data
 
-// Populate rows
-// get plantingMonthsByCategory
-//
 async function getInitialPlantData() {
-  await fetch("refereneces/squareFootGardenData.json")
-    .then((response) => response.json())
-    .then((data) => plantData.push(...data["plantsAndSpaceing"]));
+	await fetch("refereneces/squareFootGardenData.json")
+		.then((response) => response.json())
+		.then((data) => plantData.push(...data["plantsAndSpaceing"]));
 
-  console.log("plantData", plantData);
+	generatePlantAdminView(plantData);
 }
 
 getInitialPlantData();
