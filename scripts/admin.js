@@ -11,7 +11,7 @@ const plantingMonthData = [
 ];
 
 const monthButtonLabels = [
-	"janunary",
+	"january",
 	"feburary",
 	"march",
 	"april",
@@ -39,13 +39,20 @@ function createIcon(icon) {
 	return iconRow;
 }
 
-function createMonthButtonLabels(plantInfo, icon){
+function createMonthButtonLabels(plantInfo, data){
 	let calendarButtons = document.createElement("div");
 		monthButtonLabels.forEach((month) => {
 			let monthButton = document.createElement("button");
 			monthButton.innerHTML = `${month.substring(0,3)}`;
+			plantInfo[data.plantingType].forEach((dataMonth) => {
+				if(dataMonth == month){
+					monthButton.classList.add("active");
+				}
+			});
+
+
 			monthButton.addEventListener("click", function () {
-				toggleMonth(plantInfo, month, icon);
+				toggleMonth(plantInfo, month, data.icon);
 			});
 			calendarButtons.appendChild(monthButton);
 		});
@@ -60,7 +67,7 @@ function createAdminRecord(plantInfo) {
 
 	plantingMonthData.forEach((data) => {
 		let iconRow = createIcon(data.icon);
-		let calendarButtons = createMonthButtonLabels(plantInfo, data.icon);
+		let calendarButtons = createMonthButtonLabels(plantInfo, data);
 		iconRow.appendChild(calendarButtons);
 		adminRecordContainer.appendChild(iconRow);
 	});
