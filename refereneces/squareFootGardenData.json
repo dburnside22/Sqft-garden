@@ -4,43 +4,49 @@
             "plantName": "asparagus",
             "spacing": 1,
             "seedMonths": [], 
-            "transplantMonths": ["january"]
+            "transplantMonths": ["january"],
+            "houseMonths":[]
         },
         {
             "plantName": "basil (large)",
             "spacing": 1,
             "seedMonths": [], 
-            "transplantMonths": [] 
+            "transplantMonths": [],
+            "houseMonths":[]
         },
         {
             "plantName": "basil (small)",
             "spacing": 4,
             "seedMonths": [], 
-            "transplantMonths": [] 
+            "transplantMonths": [], "houseMonths":[]
         },
         {
             "plantName": "beans, snap",
             "spacing": 9,
             "seedMonths": ["april", "may", "june", "july", "august"], 
-            "transplantMonths": [] 
+            "transplantMonths": [],
+            "houseMonths":[]
         },
         {
             "plantName": "beans, lima",
             "spacing": 9,
             "seedMonths": ["may", "june"], 
-            "transplantMonths": [] 
+            "transplantMonths": [],
+            "houseMonths":[] 
         },
         {
             "plantName": "beets (large)",
             "spacing": 9,
             "seedMonths": ["march", "april", "september", "october"], 
-            "transplantMonths": [] 
+            "transplantMonths": [],
+            "houseMonths":[]
         },
         {
             "plantName": "beets (small)",
             "spacing": 16,
             "seedMonths": ["march", "april", "september", "october"], 
-            "transplantMonths": [] 
+            "transplantMonths": []
+             
         },
         {
             "plantName": "bok choy",

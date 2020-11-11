@@ -1,3 +1,5 @@
+import { getAllPlantData } from "./services/firebaseService.js";
+
 let plantData = [];
 const adminView = document.querySelector(".admin-view");
 
@@ -58,10 +60,12 @@ function generatePlantAdminView(plantData) {
 }
 
 async function getInitialPlantData() {
-	await fetch("refereneces/squareFootGardenData.json")
-		.then((response) => response.json())
-		.then((data) => plantData.push(...data["plantsAndSpaceing"]));
-
+	await getAllPlantData()
+		.then((response) => {
+			response.forEach((plant) => {
+				plantData.push(plant)
+			});
+		});
 	generatePlantAdminView(plantData);
 }
 
