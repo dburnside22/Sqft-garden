@@ -10,7 +10,17 @@ function buttonFunction(spacing, plantName, plant) {
 	clearButtons();
 	toggleCalendarViewDisplaying();
 	populateIcons(plant);
-}
+  }
+  
+  function createButtonElement(plant) {
+	let button = document.createElement("button");
+	button.classList.add("plant-button");
+	button.innerHTML = plant.plantName;
+	button.addEventListener("click", function () {
+	  buttonFunction(plant.spacing, plant.plantName, plant);
+	});
+	return button;
+  }
 
 function addButton(plant) {
 	button = createButtonElement(plant);
