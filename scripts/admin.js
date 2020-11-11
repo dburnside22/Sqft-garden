@@ -43,7 +43,7 @@ function createMonthButtonLabels(plantInfo, icon){
 	let calendarButtons = document.createElement("div");
 		monthButtonLabels.forEach((month) => {
 			let monthButton = document.createElement("button");
-			monthButton.innerHTML = `${month}`;
+			monthButton.innerHTML = `${month.substring(0,3)}`;
 			monthButton.addEventListener("click", function () {
 				toggleMonth(plantInfo, month, icon);
 			});
