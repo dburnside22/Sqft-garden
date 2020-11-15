@@ -28,7 +28,7 @@ function showCalendarView() {
 function populateIcons(plant){
     updateTransplantIcons(plant);
     getSeedMonths(plant);
-    // getPlantIndoorMonths(plant);
+    getPlantIndoorMonths(plant);
 }
 
 function updateTransplantIcons(plant){
@@ -58,18 +58,18 @@ function getSeedMonths(plant){
 }
 
 
-// function getPlantIndoorMonths(plant){ 
-//     const months = plant.houseMonths;
-//     if (showingHouseIcons === months) return;
-//     if (showingHouseIcons.length > 0) clearIcons(1);
-//     months.forEach(month => {
-//         const iconSelector = document.querySelector([`[data-icons=${month}]>img:nth-child(1)`]);
-//         if (!showingHouseIcons.includes(month)){
-//             iconSelector.classList.remove("hide");
-//         }
-//     });
-//     showingHouseIcons = months;
-// }
+function getPlantIndoorMonths(plant){ 
+    const months = plant.houseMonths;
+    if (showingHouseIcons === months) return;
+    if (showingHouseIcons.length > 0) clearIcons(1);
+    months.forEach(month => {
+        const iconSelector = document.querySelector([`[data-icons=${month}]>img:nth-child(1)`]);
+        if (!showingHouseIcons.includes(month)){
+            iconSelector.classList.remove("hide");
+        }
+    });
+    showingHouseIcons = months;
+}
 
 function clearIcons(iconOrder) {
     allTheIcons = document.querySelectorAll([`[data-icons]>img:nth-child(${iconOrder})`]);

@@ -1,7 +1,8 @@
+import { clearSearchBar, populateButtons, plantsAndSpaceing} from "./populateButtons.js"
+
 const plantNameContainer = document.querySelector(".plantName");
 const refreshButton = document.querySelector(".refresh");
-
-function scrollToTopOfPage() {
+export function scrollToTopOfPage() {
   window.scrollTo(0, 0);
 }
 
@@ -15,7 +16,7 @@ function resetAll() {
   hideCalendarView();
 }
 
-function updatePlantLabel(plantName) {
+export function updatePlantLabel(plantName) {
   plantNameContainer.innerHTML = plantName;
 }
 
@@ -24,9 +25,11 @@ function resetPlantLabel() {
 }
 
 function toggleResetActive() {
-    if (refreshButton.classList.contains("is-active")) {
-      refreshButton.classList.remove("is-active");
-    } else {
-      refreshButton.classList.add("is-active");
-    }
+  if (refreshButton.classList.contains("is-active")) {
+    refreshButton.classList.remove("is-active");
+  } else {
+    refreshButton.classList.add("is-active");
   }
+}
+
+refreshButton.addEventListener('click', resetAll);

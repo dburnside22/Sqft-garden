@@ -92,7 +92,7 @@ async function getInitialPlantData() {
 	await getAllPlantData()
 		.then((response) => {
 			response.forEach((plant) => {
-				plantData.push(plant)
+				plantData.push(plant);
 			});
 		});
 	generatePlantAdminView(plantData);
