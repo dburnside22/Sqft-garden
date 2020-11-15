@@ -43,7 +43,7 @@
             <button onclick="sortByMonth('december')">December</button>
         </div>
         
-        <button class="refresh" onclick="resetAll()">
+        <button class="refresh">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                 width="30" height="30"
                 viewBox="0 0 226 226"
@@ -188,11 +188,13 @@
         </div> 
 
         <script src="./scripts/populateSquare.js"></script>
-        <script src="./scripts/populateButtons.js"></script>
+        <script type="module" src="./scripts/populateButtons.js"></script>
+        <script type="module" src="./scripts/utilities.js"></script>
         <script src="./scripts/sortButtons.js"></script>
         <script src="./scripts/monthMenu.js"></script>
-        <script src="./scripts/utilities.js"></script>
         <script src="./scripts/searchBar.js"></script>
         <script src="./scripts/calendarView.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
     </body>
 </html>
