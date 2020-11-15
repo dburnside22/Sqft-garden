@@ -21,7 +21,7 @@ export function addOrUpdatePlant(plantData) {
 			spacing: 4,
 			seedMonths: [...plantData.seedMonths],
 			transplantMonths: [...plantData.transplantMonths],
-			houseMonths: [],
+			houseMonths: [...plantData.houseMonths],
 		})
 		.then(() => {
 			console.log("it sent the data!");
