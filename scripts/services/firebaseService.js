@@ -19,8 +19,8 @@ export function addPlant(plantData) {
 		.set({
 			plantName: `${plantData.plantName}`,
 			spacing: 4,
-			seedMonths: `${plantData.seedMonths}`,
-			transplantMonths: `${plantData.transplantMonths}`,
+			seedMonths: [...plantData.seedMonths],
+			transplantMonths: [...plantData.transplantMonths],
 			houseMonths: [],
 		})
 		.then(() => {
