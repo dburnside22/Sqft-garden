@@ -1,5 +1,9 @@
-let plantsAndSpaceing = [];
+import { getAllPlantData } from "./services/firebaseService.js";
+import { scrollToTopOfPage, updatePlantLabel } from "./utilities.js"
+
+export let plantsAndSpaceing = [];
 const buttonContainer = document.querySelector(".buttons-container");
+const searchBarInput = document.querySelector(".search-bar-input");
 let currentButtonsDisplayed;
 
 function buttonFunction(spacing, plantName, plant) {
@@ -23,11 +27,11 @@ function buttonFunction(spacing, plantName, plant) {
   }
 
 function addButton(plant) {
-	button = createButtonElement(plant);
+	let button = createButtonElement(plant);
 	buttonContainer.appendChild(button);
 }
 
-function populateButtons(buttons) {
+export function populateButtons(buttons) {
 	if (currentButtonsDisplayed === buttons) return;
 	currentButtonsDisplayed = buttons;
 	buttonContainer.innerHTML = "";
@@ -36,15 +40,10 @@ function populateButtons(buttons) {
 	});
 }
 
-function clearButtons() {
-	currentButtonsDisplayed = [];
-	buttonContainer.innerHTML = "";
-}
-
 function filterButtons() {
 	const searchingString = String(this.value).toLowerCase();
 	if (searchingString === "") return;
-
+	
 	const newPlantList = plantsAndSpaceing.filter((record) => {
 		if (record.plantName.includes(searchingString)) {
 			return record;
@@ -55,11 +54,25 @@ function filterButtons() {
 	populateButtons(newPlantList);
 }
 
-async function getInitialButtons() {
-	await fetch("refereneces/squareFootGardenData.json")
-		.then((response) => response.json())
-		.then((data) => plantsAndSpaceing.push(...data["plantsAndSpaceing"]));
+async function init() {
+	await getAllPlantData()
+	.then((response) => {
+		response.forEach((plant) => {
+			plantsAndSpaceing.push(plant);
+		});
+	});
 	populateButtons(plantsAndSpaceing);
+	searchBarInput.addEventListener("keyup", filterButtons);
 }
 
-getInitialButtons();
+function clearButtons() {
+	currentButtonsDisplayed = [];
+	buttonContainer.innerHTML = "";
+}
+
+export function clearSearchBar() {
+	searchBarInput.value = "";
+}
+  
+
+init();
