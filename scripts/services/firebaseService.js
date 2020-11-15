@@ -12,7 +12,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const database = firebase.firestore();
 
-export function addPlant(plantData) {
+export function addOrUpdatePlant(plantData) {
 	database
 		.collection("plants")
 		.doc(`${plantData.plantName}`)

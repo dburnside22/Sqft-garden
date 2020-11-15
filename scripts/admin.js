@@ -1,4 +1,4 @@
-import { getAllPlantData } from "./services/firebaseService.js";
+import { getAllPlantData, addOrUpdatePlant } from "./services/firebaseService.js";
 
 let plantData = [];
 const adminView = document.querySelector(".admin-view");
@@ -25,9 +25,15 @@ const monthButtonLabels = [
 	"december",
 ];
 
-function toggleMonth(plantData, month, icon) {
+function toggleMonth(plantData, month, plantingType) {
 	// I now have a all the info I would need to update the record in firebase
-	console.log(plantData, month, icon);
+	if (plantData[plantingType].includes(month)){
+		const index = plantData[plantingType].indexOf(month);
+		plantData[plantingType].splice(index, 1);
+	} else {
+		plantData[plantingType].push(month);
+	}
+	addOrUpdatePlant(plantData);
 }
 
 function createIcon(icon) {
@@ -52,7 +58,8 @@ function createMonthButtonLabels(plantInfo, data){
 
 
 			monthButton.addEventListener("click", function () {
-				toggleMonth(plantInfo, month, data.icon);
+				toggleMonth(plantInfo, month, data.plantingType);
+				monthButton.classList.toggle("active");
 			});
 			calendarButtons.appendChild(monthButton);
 		});

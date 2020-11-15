@@ -1,4 +1,4 @@
-import { addPlant } from "./services/firebaseService.js";
+import { addOrUpdatePlant } from "./services/firebaseService.js";
 let allThePlants = [];
 
 // async function test() {
