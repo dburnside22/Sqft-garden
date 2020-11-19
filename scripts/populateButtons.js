@@ -1,5 +1,5 @@
 import { getAllPlantData } from "./services/firebaseService.js";
-import { scrollToTopOfPage, updatePlantLabel } from "./utilities.js"
+import { scrollToTopOfPage, updatePlantLabel } from "./utilities.js";
 
 export let plantsAndSpaceing = [];
 const buttonContainer = document.querySelector(".buttons-container");
@@ -14,17 +14,17 @@ function buttonFunction(spacing, plantName, plant) {
 	clearButtons();
 	toggleCalendarViewDisplaying();
 	populateIcons(plant);
-  }
-  
-  function createButtonElement(plant) {
+}
+
+function createButtonElement(plant) {
 	let button = document.createElement("button");
 	button.classList.add("plant-button");
 	button.innerHTML = plant.plantName;
 	button.addEventListener("click", function () {
-	  buttonFunction(plant.spacing, plant.plantName, plant);
+		buttonFunction(plant.spacing, plant.plantName, plant);
 	});
 	return button;
-  }
+}
 
 function addButton(plant) {
 	let button = createButtonElement(plant);
@@ -43,7 +43,7 @@ export function populateButtons(buttons) {
 function filterButtons() {
 	const searchingString = String(this.value).toLowerCase();
 	if (searchingString === "") return;
-	
+
 	const newPlantList = plantsAndSpaceing.filter((record) => {
 		if (record.plantName.includes(searchingString)) {
 			return record;
@@ -55,8 +55,7 @@ function filterButtons() {
 }
 
 async function init() {
-	await getAllPlantData()
-	.then((response) => {
+	await getAllPlantData().then((response) => {
 		response.forEach((plant) => {
 			plantsAndSpaceing.push(plant);
 		});
@@ -73,6 +72,5 @@ function clearButtons() {
 export function clearSearchBar() {
 	searchBarInput.value = "";
 }
-  
 
 init();
