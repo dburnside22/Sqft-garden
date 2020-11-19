@@ -33,7 +33,6 @@ function removeAllSeeds() {
 }
 
 function manageSquareClassNames(seedNumberToDisplay) {
-	console.log("called this");
 	seedContainerClassNames.forEach((name) => {
 		if (seedContainer.classList.contains(name)) {
 			seedContainer.classList.remove(name);
@@ -48,8 +47,6 @@ function manageSquareClassNames(seedNumberToDisplay) {
 }
 
 function updateSeedDisplay(seedNumberToDisplay) {
-	console.log("called", seedNumberToDisplay);
-
 	if (seedNumberToDisplay >= 0 && seedNumberToDisplay !== 100) {
 		if (seedNumberToDisplay != seedCount) {
 			manageSquareClassNames(seedNumberToDisplay);
