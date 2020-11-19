@@ -47,14 +47,14 @@ function manageSquareClassNames(seedNumberToDisplay) {
 }
 
 function updateSeedDisplay(seedNumberToDisplay) {
-	if (seedNumberToDisplay >= 0 && seedNumberToDisplay !== 100) {
+	if (seedNumberToDisplay >= 0 && seedNumberToDisplay != 100) {
 		if (seedNumberToDisplay != seedCount) {
 			manageSquareClassNames(seedNumberToDisplay);
 		}
 		while (seedNumberToDisplay != seedCount) {
 			seedNumberToDisplay - seedCount > 0 ? addSeed() : removeSeed();
 		}
-	} else if (seedNumberToDisplay === 100) {
+	} else if (seedNumberToDisplay == 100) {
 		removeAllSeeds();
 		addSeed();
 		manageSquareClassNames(1);
