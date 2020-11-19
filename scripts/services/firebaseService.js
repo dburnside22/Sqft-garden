@@ -18,10 +18,10 @@ export function addOrUpdatePlant(plantData) {
 		.doc(`${plantData.plantName}`)
 		.set({
 			plantName: `${plantData.plantName}`,
-			spacing: 4,
+			spacing: `${plantData.spacing}`,
 			seedMonths: [...plantData.seedMonths],
 			transplantMonths: [...plantData.transplantMonths],
-			houseMonths: [...plantData.houseMonths],
+			houseMonths: [],
 		})
 		.then(() => {
 			console.log("it sent the data!");
@@ -31,12 +31,15 @@ export function addOrUpdatePlant(plantData) {
 		});
 }
 
-export function udpatePlantData(plant){
-	database.collection("plants").doc(`${plant.plantName}`).set(plant).then(console.log(`${plant.plantName} was updated`));
-
+export function udpatePlantData(plant) {
+	database
+		.collection("plants")
+		.doc(`${plant.plantName}`)
+		.set(plant)
+		.then(console.log(`${plant.plantName} was updated`));
 }
 
 export async function getAllPlantData() {
-	const allThePlants = await database.collection('plants').get()
-    return allThePlants.docs.map(doc => doc.data());
+	const allThePlants = await database.collection("plants").get();
+	return allThePlants.docs.map((doc) => doc.data());
 }
