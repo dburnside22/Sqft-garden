@@ -4,6 +4,10 @@ import {
 	plantsAndSpaceing,
 } from "./populateButtons.js";
 
+import { resetPlantLabel } from "./utilities.js";
+
+const calendarButtons = document.querySelectorAll(".menu > button");
+
 function sortButtonsBySeedCount(seedCount) {
 	updateSeedDisplay(seedCount);
 	const newPlantList = plantsAndSpaceing.filter((record) => {
@@ -28,3 +32,27 @@ function sortByMonth(month) {
 	resetPlantLabel();
 	addMonthLabel(month);
 }
+
+function setupCalendarFunctions() {
+	const monthButtonLabels = [
+		"january",
+		"feburary",
+		"march",
+		"april",
+		"may",
+		"june",
+		"july",
+		"august",
+		"september",
+		"october",
+		"november",
+		"december",
+	];
+	calendarButtons.forEach((button, index) => {
+		button.addEventListener("click", () =>
+			sortByMonth(monthButtonLabels[index])
+		);
+	});
+}
+
+setupCalendarFunctions();
