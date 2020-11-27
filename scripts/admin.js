@@ -1,13 +1,15 @@
-import { getAllPlantData, addOrUpdatePlant } from "./services/firebaseService.js";
+import {
+	getAllPlantData,
+	addOrUpdatePlant,
+} from "./services/firebaseService.js";
 
 let plantData = [];
 const adminView = document.querySelector(".admin-view");
 
 const plantingMonthData = [
-	{"icon": "house", "plantingType": "houseMonths"},
-	{"icon": "plant", "plantingType": "transplantMonths"},
-	{"icon": "seed", "plantingType": "seedMonths"},
-
+	{ icon: "house", plantingType: "houseMonths" },
+	{ icon: "plant", plantingType: "transplantMonths" },
+	{ icon: "seed", plantingType: "seedMonths" },
 ];
 
 const monthButtonLabels = [
@@ -27,7 +29,7 @@ const monthButtonLabels = [
 
 function toggleMonth(plantData, month, plantingType) {
 	// I now have a all the info I would need to update the record in firebase
-	if (plantData[plantingType].includes(month)){
+	if (plantData[plantingType].includes(month)) {
 		const index = plantData[plantingType].indexOf(month);
 		plantData[plantingType].splice(index, 1);
 	} else {
@@ -45,24 +47,23 @@ function createIcon(icon) {
 	return iconRow;
 }
 
-function createMonthButtonLabels(plantInfo, data){
+function createMonthButtonLabels(plantInfo, data) {
 	let calendarButtons = document.createElement("div");
-		monthButtonLabels.forEach((month) => {
-			let monthButton = document.createElement("button");
-			monthButton.innerHTML = `${month.substring(0,3)}`;
-			plantInfo[data.plantingType].forEach((dataMonth) => {
-				if(dataMonth == month){
-					monthButton.classList.add("active");
-				}
-			});
-
-
-			monthButton.addEventListener("click", function () {
-				toggleMonth(plantInfo, month, data.plantingType);
-				monthButton.classList.toggle("active");
-			});
-			calendarButtons.appendChild(monthButton);
+	monthButtonLabels.forEach((month) => {
+		let monthButton = document.createElement("button");
+		monthButton.innerHTML = `${month.substring(0, 3)}`;
+		plantInfo[data.plantingType].forEach((dataMonth) => {
+			if (dataMonth == month) {
+				monthButton.classList.add("active");
+			}
 		});
+
+		monthButton.addEventListener("click", function () {
+			toggleMonth(plantInfo, month, data.plantingType);
+			monthButton.classList.toggle("active");
+		});
+		calendarButtons.appendChild(monthButton);
+	});
 	return calendarButtons;
 }
 
@@ -89,12 +90,11 @@ function generatePlantAdminView(plantData) {
 }
 
 async function getInitialPlantData() {
-	await getAllPlantData()
-		.then((response) => {
-			response.forEach((plant) => {
-				plantData.push(plant);
-			});
+	await getAllPlantData().then((response) => {
+		response.forEach((plant) => {
+			plantData.push(plant);
 		});
+	});
 	generatePlantAdminView(plantData);
 }
 
