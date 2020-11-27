@@ -1,5 +1,5 @@
 import { getAllPlantData } from "./services/firebaseService.js";
-import { scrollToTopOfPage, updatePlantLabel } from "./utilities.js"
+import { scrollToTopOfPage, updatePlantLabel, resetPlantLabel} from "./utilities.js"
 
 export let plantsAndSpaceing = [];
 const buttonContainer = document.querySelector(".buttons-container");

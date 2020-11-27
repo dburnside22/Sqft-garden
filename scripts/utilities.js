@@ -20,7 +20,7 @@ export function updatePlantLabel(plantName) {
   plantNameContainer.innerHTML = plantName;
 }
 
-function resetPlantLabel() {
+export function resetPlantLabel() {
   plantNameContainer.innerHTML = "";
 }
 
