@@ -25,7 +25,7 @@ export function updatePlantLabel(plantName) {
 }
 
 export function resetPlantLabel() {
-	plantNameContainer.innerHTML = "";
+  plantNameContainer.innerHTML = "";
 }
 
 function toggleResetActive() {
