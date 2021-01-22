@@ -31,7 +31,7 @@ export function addOrUpdatePlant(plantData) {
 		});
 }
 
-export function udpatePlantData(plant) {
+export function updatePlantData(plant) {
 	database
 		.collection("plants")
 		.doc(`${plant.plantName}`)
